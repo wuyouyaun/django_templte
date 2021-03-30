@@ -1,0 +1,5 @@
+[0;32m2020-11-12 15:13:53 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;32m2020-11-12 15:13:53 - api - "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:152" - supplier_loadown_template - DEBUG -  返回日志: <Response [200]>[0m
+[0;34m15:13:53  "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:156"   D:\Dmall_project\case\DF_project\DF_supplier 
+ [0m[0;34m15:13:53  "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:158"   D:\Dmall_project\case\DF_project\DF_supplier\供商公司導入模板.xls 
+ [0m

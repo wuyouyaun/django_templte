@@ -1,0 +1,56 @@
+
+
+
+
+- config:
+    name: VC平台登录模块
+    request:
+         base_url: http://testdf-vc-basemanage.dmall.com.hk
+    variables:
+         loginName: test_001_01
+         loginPassword: Admin123456_
+
+
+- test:
+    name: vc_登录获取vaules值
+    request:
+         verify: false
+         url: /retails
+         method: POST
+         headers:
+            Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+            Referer: http://testdf-vc.dmall.com.hk/
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+
+         data:
+            retailId: ""
+            loginName: $loginName
+            loginPassword: $loginPassword
+
+    extract:
+          - value: content.data.0.value
+
+
+    validate:
+          - eq: [status_code, 200]
+          - eq: [content.code, 0]
+
+
+- test:
+    name: 用户登录
+    request:
+        url: /login
+        method: POST
+        headers:
+           Referer: http://testdf-vc.dmall.com.hk/
+           Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+           User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        data:
+           loginName: $loginName
+           loginPassword: $loginPassword
+           retailId: $value
+
+    validate:
+    - eq: [status_code, 200]
+    - eq: [content.code, 0]
+    - eq: [content.message, "操作成功"]

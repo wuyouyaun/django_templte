@@ -1,0 +1,3 @@
+[0;32m2020-11-13 10:57:27 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;32m2020-11-13 10:57:27 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;32m2020-11-13 10:57:28 - api - "D:\Dmall_project\case\DF_project\df_commodity_system\commodity_demo.py:41" - import_source_group - DEBUG -  返回日志：{'code': 'success', 'result': '導入數據成功，共1條', 'data': None}[0m

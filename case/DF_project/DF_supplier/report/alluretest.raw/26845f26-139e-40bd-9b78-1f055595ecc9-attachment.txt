@@ -1,0 +1,7 @@
+[0;32m2020-11-13 10:51:11 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;34m10:51:11  "D:\Dmall_project\case\DF_project\DF_supplier\conftest.py:11"   1111 
+ [0m[0;34m10:51:11  "D:\Dmall_project\case\DF_project\DF_supplier\conftest.py:12"   后置操作 
+ [0m[0;34m10:51:12  "D:\Dmall_project\case\DF_project\DF_supplier\conftest.py:21"   9999 
+ [0m[0;34m10:51:12  "D:\Dmall_project\case\DF_project\DF_supplier\conftest.py:22"   后置操作 
+ [0m[0;32m2020-11-13 10:51:12 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;32m2020-11-13 10:51:12 - api - "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:55" - save_supplier_information - DEBUG -  返回日志：{'code': 0, 'data': 12975, 'message': None, 'succ': True}[0m

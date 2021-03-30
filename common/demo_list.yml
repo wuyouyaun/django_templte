@@ -1,0 +1,101 @@
+
+
+#- a
+
+#- user: admin
+#  psw: "123456"
+#- username: admin
+#  psw: "123456"
+#  mail: 353558733@qq.com
+#  bool: true
+#  bool2: false            #布尔值为小写的true,false,读取后成为大写的True,Flase
+#- user: admin1
+#  psw: "123456a"
+#  mail: 123@qq.com         # 一个文件只能是一种结构，一种对象类型
+#  bool3: ture
+#  none: ~             # none为~，读取后为None
+
+
+
+#testl_business:
+#- [test1: "wuyy",psw: "12345a"]
+
+#- n6: !!str 123
+#- n7: !!str true
+
+
+
+#ceshi:
+#- username1: admin1
+#- password1: 123456a1
+#ceshi1:
+#   username: admin
+#   password: 123456a
+
+
+
+- config:
+     name: DF登录模块
+     request:
+        base_url: https://testdf-vc-supplier.dmall.com.hk
+
+      variables:
+
+
+
+- test:
+    name: DF—查询公司信息
+    request:
+        verify: false       # 忽略对ssl证书的校验
+        url: /cx/company/find
+        method: POST
+        headers:
+            Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+            Referer: https://testpartner.dmall.com.hk/
+            Cookie:  tempid=C926C76BC0A00002C55A1BC57D801E301606380936242; inited=true; _ga=GA1.3.819588118.1606719528; dmall-zone=null; dmall-locale=zh_HK; UYBFEWAEE=191C976215F4DC1312811C2395316AF433E5B01790EA7999A5E6B5DF6076E14811313D454884F5161920E9378BBB0080DCA22447170C31C088695634EA120921; login_no=MTExMTExMTFfbWZZbmRTYWZucW9QUzdaUnl3M3RUQT09; wm_menu_id=menu_473; ticket=74FF18F5DFB85963FCBB4B7EA39C9E58C9835DAFBD5F5A34C511651C092DF134D156651D06F7D88FEB47CA359E93082DB7358D47C97A1578C6C5A325297B1B71EF742F646B6DB7B5C9489F9742EF0F872DC8CC2A0EF833F9D5B983C1BC8189A88F15458CF8DEE335A0D8024945280FB9A668345E20EF4D369F54C45E5BC68293
+            User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+        data:
+            form_data: '{"pageSize":20,"currentPage":1}'
+
+    extract:
+       - code: content.code
+
+    validate:
+          - eq: [status_code,200]
+          - eq: [$code,0]
+
+
+- test:
+    name: 账号管理查询
+    request:
+        url: /cx/account/find
+        method: POST
+        headers:
+           Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+           Referer: https://testpartner.dmall.com.hk/
+        data:
+           form_data: '{"pageSize":20,"currentPage":1}'
+
+    validate:
+        - eq: [status_code,200]
+        - eq: [$code,0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

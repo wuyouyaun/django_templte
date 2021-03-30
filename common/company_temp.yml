@@ -1,0 +1,27 @@
+
+
+
+
+
+- config:
+      name: 公司模板下载
+      request:
+         base_url: testdf-vc-supplier.dmall.com.hk
+#         cookie:  ticket=BC806978622173D0156590AAF36396EFC7BB6BD7D0B8C5479CEA1F1F663D03D04D7E4FEBC4D6EF84BBFDDFDC4E31F01EF55C0131CB088E01350D91B4D177BCE4050DC874ADDE4407564AFD4620B678B5E135B8BA0726D6E44DEA1769894853708AE9B074CCD7CC841A4C167AB00F1E246028D3BFE6A3537869E96E514A520C77
+      variables:
+         cookie:  ticket=BC806978622173D0156590AAF36396EFC7BB6BD7D0B8C5479CEA1F1F663D03D04D7E4FEBC4D6EF84BBFDDFDC4E31F01EF55C0131CB088E01350D91B4D177BCE4050DC874ADDE4407564AFD4620B678B5E135B8BA0726D6E44DEA1769894853708AE9B074CCD7CC841A4C167AB00F1E246028D3BFE6A3537869E96E514A520C77
+- test:
+      name: 验证公司信息模板下载功能的有效性
+      request:
+          method: GET
+          url: /cx/company/template
+          headers:
+              Referer: https://testpartner.dmall.com.hk
+              cookie: $cookie
+              User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36
+              Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+
+      validate:
+      - eq:  [status_code,200]
+

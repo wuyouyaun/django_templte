@@ -1,0 +1,4 @@
+[0;32m2020-11-05 18:00:16 - api - "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:44" - save_supplier_information - DEBUG -  返回日志：{'code': 0, 'data': 11533, 'message': None, 'succ': True}[0m
+[0;34m18:00:16  "D:\Dmall_project\case\DF_project\DF_supplier\test_supplier.py:119"   @##@#@##@#@ {'code': 0, 'data': 11533, 'message': None, 'succ': True} 
+ [0m[0;34m18:00:16  "D:\Dmall_project\case\DF_project\DF_supplier\test_supplier.py:120"   33333333333333333333 
+ [0m[0;32m2020-11-05 18:00:17 - api - "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:44" - save_supplier_information - DEBUG -  返回日志：{'code': 0, 'data': {'companyName': '公司名稱+銀行開戶名+銀行賬號重復,不允許新建公司信息'}, 'message': None, 'succ': True}[0m

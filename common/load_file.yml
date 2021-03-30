@@ -1,0 +1,17 @@
+
+- config:
+      name: 导入文件
+#      variables: {}
+
+- test:
+      name: files
+      request:
+          files:
+              file: ["供商公司導入模板 (5).xls",'${get_file()}',"Content-Type: application/vnd.ms-excel"]
+          headers:
+              Referer: "https://testpartner.dmall.com.hk/"
+          method: POST
+          url: https://testdf-vc-supplier.dmall.com.hk/cx/company/import
+
+      validate:
+      - eq: [status_code,200]

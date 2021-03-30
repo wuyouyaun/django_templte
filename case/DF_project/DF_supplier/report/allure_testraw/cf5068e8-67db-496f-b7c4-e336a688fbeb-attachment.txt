@@ -1,0 +1,2 @@
+[0;32m2020-12-17 16:43:47 - api - "D:\Dmall_project\case\DF_project\df_testlogin.py:35" - DF_Login - DEBUG -  返回日志：<Response [200]>[0m
+[0;32m2020-12-17 16:43:47 - api - "D:\Dmall_project\case\DF_project\DF_supplier\supplier.py:222" - find_account_list - DEBUG -  返回日志：{'code': 0, 'data': {'pageSize': 20, 'pageNum': 3, 'totalCount': 29, 'pageCount': 2, 'list': []}, 'message': None, 'succ': True}[0m

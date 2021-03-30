@@ -1,0 +1,89 @@
+
+
+
+#- config:
+#    name: 登录用户描述
+#    request:
+#      base_url: http://testdf-vc-basemanage.dmall.com.hk
+#
+#- test:
+#    name: 输入用户名获取登录前的values值
+#    request:
+#      url: /retails
+#      method: POST
+#      data:
+#          loginName: admin
+#          loginPassword: Dmall@1234
+#          retailId: ""
+#      headers:
+#          Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+#          User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36
+#                    (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+#          Referer: http://testdf-vc.dmall.com.hk
+#    extract:
+#    - values: content.data.0.value
+#
+#    validate:
+#    - eq:  [status_code,200]
+#    - eq:  [content.code,0]
+
+
+
+- config:
+      name: 注册案例
+      request:
+         base_url: http://49.235.92.12:6009
+      validate:
+         delete_sql: "delete  from cx_company where company_name='深圳大源源呐941';"
+
+
+
+
+- test:
+    name: 注册用例
+    request:
+      method: POST
+      url: /api/v1/register
+      json:
+        uesrname: test2003
+        password: "123456"
+        mail: 353558733@qq.com
+
+    validate:
+    - eq: [content.msg,"注册成功！"]
+    - eq: [status_code,200]
+
+#    setup_hooks:
+#    - ${delete_db(db=db_connect(),$delete_sql}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

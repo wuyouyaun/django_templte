@@ -1,0 +1,1 @@
+{"uuid": "16082acd-a33a-425b-9f8c-139805834765", "children": ["bc918bd9-7852-44af-812e-0adf0906e2fd"], "befores": [{"name": "delete_register", "status": "passed", "start": 1605165219668, "stop": 1605165220133}], "afters": [{"name": "delete_register::0", "status": "passed", "start": 1605165220935, "stop": 1605165220935}], "start": 1605165219668, "stop": 1605165220935}
